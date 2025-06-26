@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Earnfiy pro - &#2456;&#2480;&#2503; &#2476;&#2488;&#2503; &#2439;&#2472;&#2453;&#2494;&#2478; &#2453;&#2480;&#2497;&#2472; &#2488;&#2489;&#2460; &#2477;&#2494;&#2476;&#2503; &#2447;&#2454;&#2472;&#2503; &#2465;&#2494;&#2451;&#2472;&#2482;&#2503;&#2494;&#2465; &#2453;&#2480;&#2497;&#2472;</title>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Earnfiy pro - ঘরে বসে ইনকাম করুন সহজ ভাবে এখনে ডাওনলোড করুন</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
     :root {
       --primary: #00D1B2; /* Vibrant teal for buttons and highlights */
       --secondary: #1A237E; /* Deep indigo for text and accents */
@@ -259,7 +260,7 @@
     }
 
     .feature-card:hover {
-      transform&nbsp;W translateY(-8px);
+      transform: translateY(-8px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
@@ -352,104 +353,121 @@
         height: 300px;
       }
     }
-  </style>
+  
+/* Animation for feature cards */
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.feature-card {
+  animation: fadeUp 0.6s ease-in-out forwards;
+}
+
+/* Prevent text overflow */
+.container, .app-info, .about, .features, .reviews {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 360px) {
+  .app-info h1 {
+    font-size: 1.2rem;
+  }
+  .install-btn {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Prevent text from overflowing */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Ensure containers don't allow overflow */
+.container, .header, .about, .features, .reviews, .app-info, .feature-card, .review-card {
+  overflow-x: hidden;
+}
+
+</style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header Section -->
-    <div class="header">
-      <img src="https://drive.google.com/thumbnail?id=12UarswPQW919yBeQwUW7l4O_hlPv1p6S&sz=sBee" alt="&#2480;&#2495;&#2441;&#2439;&#2475;&#2494;&#2439; &#2474;&#2509;&#2480;&#2507; &#2438;&#2439;&#2453;&#2472;" class="app-icon">
-      <div class="app-info">
-        <h1>Earnify pro - make money easy </h1>
-        <p>&#2488;&#2494;&#2480;&#2509;&#2477;&#2503; &#2453;&#2480;&#2503; &#2480;&#2495;&#2527;&#2503;&#2482; &#2478;&#2494;&#2472;&#2495; &#2439;&#2472;&#2453;&#2494;&#2478; &#2453;&#2480;&#2497;&#2472;</p>
-        <div class="rating">
-          <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> 4.5 (17K+ &#2480;&#2495;&#2477;&#2495;&#2441;)
+<div class="container">
+<!-- Header Section -->
+<div class="header">
+<img alt="রিউইফাই প্রো আইকন" class="app-icon" src="https://drive.google.com/thumbnail?id=12UarswPQW919yBeQwUW7l4O_hlPv1p6S&amp;sz=sBee"/>
+<div class="app-info">
+<h1>Earnify pro - make money easy </h1>
+<p>সার্ভে করে রিয়েল মানি ইনকাম করুন</p>
+<div class="rating">
+<span>★★★★☆</span> 4.5 (17K+ রিভিউ)
         </div>
-        <a href="https://github.com/Earnfiy-pro/Earnify-APK-File/raw/refs/heads/main/Earnify%20Pro.apk" class="install-btn">
-          <span class="material-icons">get_app</span> &#2439;&#2472;&#2488;&#2509;&#2463;&#2482; &#2453;&#2480;&#2497;&#2472;
+<a class="install-btn" href="https://github.com/Earnfiy-pro/Earnify-APK-File/raw/refs/heads/main/Earnify%20Pro.apk">
+<span class="material-icons">get_app</span> ইনস্টল করুন
         </a>
-      </div>
-    </div>
-
-    <!-- Tabs Navigation -->
-    <div class="tabs">
-      <div class="tab active" onclick="showSection('about')">&#2437;&#2509;&#2479;&#2494;&#2474; &#2488;&#2478;&#2509;&#2474;&#2480;&#2509;&#2453;&#2503;</div>
-      <div class="tab" onclick="showSection('features')">&#2475;&#2495;&#2458;&#2494;&#2480;</div>
-      <div class="tab" onclick="showSection('reviews')">&#2480;&#2495;&#2477;&#2495;&#2441;</div>
-    </div>
-
-    <!-- Screenshots Section -->
-    <div class="screenshots">
-      <img src="https://drive.google.com/thumbnail?id=128C46RGiin6gUAZ3SeW2I7Q4lymsJkqC&sz=sBee" alt="Screenshot 1" class="screenshot">
-      <img src="https://drive.google.com/thumbnail?id=12WLqtt__J8LPlcOYCGkhW6GbNTBJuIt0&sz=sBee" alt="Screenshot 2" class="screenshot">
-      <img src="https://drive.google.com/thumbnail?id=12CU20_6oY-CW3f5YPQiEcjK7M-lTFY6h&sz=sBee" alt="Screenshot 3" class="screenshot">
-      <img src="https://drive.google.com/thumbnail?id=12JjkszCuKSZJ0XQx7Bt6RB7A7lAB_870&sz=sBee"alt="Screenshot 4"class="screenshot"
-    </div>
-
-    <!-- About Section -->
-    <div class="about" id="about">
-      <h2>&#2437;&#2509;&#2479;&#2494;&#2474; &#2488;&#2478;&#2509;&#2474;&#2480;&#2509;&#2453;&#2503;</h2>
-      <p>Earnfiy Pro - ইনকামের সহজ পথ! Earnfiy Pro হলো একটি স্মার্ট ইনকাম অ্যাপ যেখানে আপনি নানা রকম টাস্ক পূরণ করে আয় করতে পারবেন।
+</div>
+</div>
+<!-- Tabs Navigation -->
+<div class="tabs">
+<div class="tab active" onclick="showSection('about')">অ্যাপ সম্পর্কে</div>
+<div class="tab" onclick="showSection('features')">ফিচার</div>
+<div class="tab" onclick="showSection('reviews')">রিভিউ</div>
+</div>
+<!-- Screenshots Section -->
+<div class="screenshots">
+<img alt="Screenshot 1" class="screenshot" src="https://drive.google.com/thumbnail?id=128C46RGiin6gUAZ3SeW2I7Q4lymsJkqC&amp;sz=sBee"/>
+<img alt="Screenshot 2" class="screenshot" src="https://drive.google.com/thumbnail?id=12WLqtt__J8LPlcOYCGkhW6GbNTBJuIt0&amp;sz=sBee"/>
+<img alt="Screenshot 3" class="screenshot" src="https://drive.google.com/thumbnail?id=12CU20_6oY-CW3f5YPQiEcjK7M-lTFY6h&amp;sz=sBee"/>
+<img alt="Screenshot 4" class="screenshot" src="https://drive.google.com/thumbnail?id=12JjkszCuKSZJ0XQx7Bt6RB7A7lAB_870&amp;sz=sBee"/>
+</div>
+<!-- About Section -->
+<div class="about" id="about">
+<h2>অ্যাপ সম্পর্কে</h2>
+<p>Earnfiy Pro - ইনকামের সহজ পথ! Earnfiy Pro হলো একটি স্মার্ট ইনকাম অ্যাপ যেখানে আপনি নানা রকম টাস্ক পূরণ করে আয় করতে পারবেন।
 এই অ্যাপে রয়েছে: 
-<li>Daily Bonus – প্রতিদিন লগইন করলেই ফ্রি কয়েন পান 🎁 </li>
-<li>Math Task – সহজ অংকের উত্তর দিয়ে আয় করুন ➕➖ </li>
-
-<li>Article পড়া – আর্টিকেল পড়ুন, জ্ঞান বাড়ান ও কয়েন পান 📚 </li>
-
-<li>Spin & Wheel – চাকা ঘুরান, জিতুন রিওয়ার্ড 🎡 </li>
-
-<li>Scratch Card – স্ক্র্যাচ করে জিতুন চমকপ্রদ পুরস্কার 🎉 </li>
-
-<li>Offers – অফার পূরণ করে আয় করুন বাড়তি কয়েন 💸 </li>
-
-<li> Zone of Video – ভিডিও দেখুন, বিনোদনের সাথে আয় করুন 🎬 </li>
-
-<li> Gift Code Redeem – গিফট কোড ব্যবহার করে ইনস্ট্যান্ট রিওয়ার্ড পান 🎟️</li>
-
-<li>YouTube Video দেখা – ইউটিউব ভিডিও দেখে কয়েন অর্জন করুন ▶️</li>
-
- <li>Bkash/Nagad Withdraw সিস্টেম 📲</li> 
-
-  <li>রেফার করে আয় বাড়ানোর সুযোগ 🫂</li>
-
-<li>ইউজার ফ্রেন্ডলি ডিজাইন এবং ফাস্ট পারফরমেন্স ⚡ এখনই ডাউনলোড করুন Earnfiy Pro, আর ঘরে বসেই শুরু করুন ইনকাম!Earnfiy Pro - ইনকামের সহজ পথ!</li>
-    </div>
-
-    <!-- Features Section -->
-    <div class="features" id="features">
-      <div class="feature-card">
-        <h3><span class="material-icons">phone_iphone</span> &#2488;&#2489;&#2460; &#2439;&#2472;&#2509;&#2463;&#2494;&#2480;&#2475;&#2503;&#2488;</h3>
-        <p>&#2488;&#2453;&#2482; &#2476;&#2527;&#2488;&#2503;&#2480; &#2460;&#2472;&#2509;&#2479; &#2476;&#2509;&#2479;&#2476;&#2489;&#2494;&#2480;&#2453;&#2494;&#2480;&#2496;-&#2476;&#2494;&#2472;&#2509;&#2471;&#2476; &#2465;&#2495;&#2460;&#2494;&#2439;&#2472;</p>
-      </div>
-      <div class="feature-card">
-        <h3><span class="material-icons">flash_on</span> &#2470;&#2509;&#2480;&#2497;&#2468; &#2474;&#2503;&#2478;&#2503;&#2472;&#2509;&#2463;</h3>
-        <p>&#2488;&#2494;&#2480;&#2509;&#2477;&#2503; &#2486;&#2503;&#2487;&#2503; &#2468;&#2494;&#2510;&#2453;&#2509;&#2487;&#2467;&#2495;&#2453; &#2463;&#2494;&#2453;&#2494; &#2474;&#2494;&#2472;</p>
-      </div>
-      <div class="feature-card">
-        <h3><span class="material-icons">security</span> &#2441;&#2458;&#2509;&#2458; &#2472;&#2495;&#2480;&#2494;&#2474;&#2468;&#2509;&#2468;&#2494;</h3>
-        <p>&#2438;&#2474;&#2472;&#2494;&#2480; &#2465;&#2503;&#2463;&#2494; &#2488;&#2478;&#2509;&#2474;&#2498;&#2480;&#2509;&#2467; &#2488;&#2497;&#2480;&#2453;&#2509;&#2487;&#2495;&#2468;</p>
-      </div>
-    </div>
-
-    <!-- Reviews Section -->
-    <div class="reviews" id="reviews">
-      <h2>&#2480;&#2495;&#2477;&#2495;&#2441; &#2447;&#2476;&#2434; &#2480;&#2503;&#2463;&#2495;&#2434;</h2>
-      <div class="review-card">
-        <p><strong>&#2480;&#2489;&#2495;&#2478; &#2478;&#2495;&#2527;&#2494;</strong> <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
-        <p>&#2437;&#2488;&#2494;&#2471;&#2494;&#2480;&#2467; &#2437;&#2509;&#2479;&#2494;&#2474;! &#2474;&#2509;&#2480;&#2468;&#2495;&#2470;&#2495;&#2472; &#2488;&#2494;&#2480;&#2509;&#2477;&#2503; &#2453;&#2480;&#2503; &#2539;&#2534;&#2534; &#2463;&#2494;&#2453;&#2494; &#2474;&#2480;&#2509;&#2479;&#2472;&#2509;&#2468; &#2439;&#2472;&#2453;&#2494;&#2478; &#2453;&#2480;&#2459;&#2495;&#2404;</p>
-      </div>
-      <div class="review-card">
-        <p><strong>&#2480;&#2495;&#2527;&#2494; &#2438;&#2453;&#2509;&#2468;&#2494;&#2480;</strong> <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span></p>
-        <p>&#2476;&#2509;&#2479;&#2476;&#2489;&#2494;&#2480; &#2453;&#2480;&#2494; &#2488;&#2489;&#2460; &#2447;&#2476;&#2434; &#2474;&#2503;&#2478;&#2503;&#2472;&#2509;&#2463; &#2470;&#2509;&#2480;&#2497;&#2468;&#2404; &#2468;&#2476;&#2503; &#2438;&#2480;&#2507; &#2488;&#2494;&#2480;&#2509;&#2477;&#2503; &#2469;&#2494;&#2453;&#2482;&#2503; &#2477;&#2494;&#2482;&#2507; &#2489;&#2468;&#2507;&#2404;</p>
-      </div>
-      <div class="review-card">
-        <p><strong>&#2488;&#2494;&#2476;&#2509;&#2476;&#2495;&#2480; &#2489;&#2494;&#2488;&#2494;&#2472; &#2488;&#2495;&#2474;&#2472;</strong> <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span></p>
-        <p>&#2438;&#2478;&#2495; &#2474;&#2509;&#2480;&#2469;&#2478;&#2503; &#2477;&#2503;&#2476;&#2503;&#2459;&#2495;&#2482;&#2494;&#2478; &#2447;&#2463;&#2494; &#2475;&#2503;&#2453; &#2437;&#2509;&#2479;&#2494;&#2474;, &#2468;&#2476;&#2503; &#2459;&#2507;&#2463; &#2459;&#2507;&#2463; &#2463;&#2494;&#2488;&#2509;&#2453; &#2474;&#2498;&#2480;&#2467; &#2453;&#2480;&#2503; &#2474;&#2509;&#2480;&#2468;&#2495;&#2470;&#2495;&#2472; &#2536;&#2534;&#2534;-&#2542;&#2534;&#2534; &#2463;&#2494;&#2453;&#2494; &#2474;&#2494;&#2458;&#2509;&#2459;&#2495;&#2404;</p>
-      </div>
-    </div>
-  </div>
-
-  <script>
+</p><p>Daily Bonus – প্রতিদিন লগইন করলেই ফ্রি কয়েন পান 🎁 Math Task – সহজ অংকের উত্তর দিয়ে আয় করুন ➕➖ Article পড়া – আর্টিকেল পড়ুন, জ্ঞান বাড়ান ও কয়েন পান 📚 Spin &amp; Wheel – চাকা ঘুরান, জিতুন রিওয়ার্ড 🎡 Scratch Card – স্ক্র্যাচ করে জিতুন চমকপ্রদ পুরস্কার 🎉 Offers – অফার পূরণ করে আয় করুন বাড়তি কয়েন 💸 Zone of Video – ভিডিও দেখুন, বিনোদনের সাথে আয় করুন 🎬 Gift Code Redeem – গিফট কোড ব্যবহার করে ইনস্ট্যান্ট রিওয়ার্ড পান 🎟️ YouTube Video দেখা – ইউটিউব ভিডিও দেখে কয়েন অর্জন করুন ▶️ Bkash/Nagad Withdraw সিস্টেম 📲 রেফার করে আয় বাড়ানোর সুযোগ 🫂 ইউজার ফ্রেন্ডলি ডিজাইন এবং ফাস্ট পারফরমেন্স ⚡ এখনই ডাউনলোড করুন Earnfiy Pro, আর ঘরে বসেই শুরু করুন ইনকাম!Earnfiy Pro - ইনকামের সহজ পথ!</p></div>
+<!-- Features Section -->
+<div class="features" id="features">
+<div class="feature-card">
+<h3><span class="material-icons">phone_iphone</span> সহজ ইন্টারফেস</h3>
+<p>সকল বয়সের জন্য ব্যবহারকারী-বান্ধব ডিজাইন</p>
+</div>
+<div class="feature-card">
+<h3><span class="material-icons">flash_on</span> দ্রুত পেমেন্ট</h3>
+<p>সার্ভে শেষে তাৎক্ষণিক টাকা পান</p>
+</div>
+<div class="feature-card">
+<h3><span class="material-icons">security</span> উচ্চ নিরাপত্তা</h3>
+<p>আপনার ডেটা সম্পূর্ণ সুরক্ষিত</p>
+</div>
+</div>
+<!-- Reviews Section -->
+<div class="reviews" id="reviews">
+<h2>রিভিউ এবং রেটিং</h2>
+<div class="review-card">
+<p><strong>রহিম মিয়া</strong> <span>★★★★★</span></p>
+<p>অসাধারণ অ্যাপ! প্রতিদিন সার্ভে করে ৫০০ টাকা পর্যন্ত ইনকাম করছি।</p>
+</div>
+<div class="review-card">
+<p><strong>রিয়া আক্তার</strong> <span>★★★★☆</span></p>
+<p>ব্যবহার করা সহজ এবং পেমেন্ট দ্রুত। তবে আরো সার্ভে থাকলে ভালো হতো।</p>
+</div>
+<div class="review-card">
+<p><strong>সাব্বির হাসান সিপন</strong> <span>★★★☆☆</span></p>
+<p>আমি প্রথমে ভেবেছিলাম এটা ফেক অ্যাপ, তবে ছোট ছোট টাস্ক পূরণ করে প্রতিদিন ২০০-৮০০ টাকা পাচ্ছি।</p>
+</div>
+</div>
+</div>
+<script>
     // Tab Navigation
     function showSection(sectionId) {
       document.querySelectorAll('.about, .features, .reviews').forEach(section => {
@@ -470,5 +488,4 @@
     document.getElementById('about').style.display = 'block';
   </script>
 </body>
-  </html>
-  
+</html>
