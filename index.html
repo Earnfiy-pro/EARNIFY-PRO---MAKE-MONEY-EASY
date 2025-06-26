@@ -453,18 +453,23 @@
 <!-- Reviews Section -->
 <div class="reviews" id="reviews">
 <h2>রিভিউ এবং রেটিং</h2>
-<div class="review-card">
-<p><strong>রহিম মিয়া</strong> <span>★★★★★</span></p>
-<p>অসাধারণ অ্যাপ! প্রতিদিন সার্ভে করে ৫০০ টাকা পর্যন্ত ইনকাম করছি।</p>
+<div class="user-review-form" style="margin-top: 2rem; padding: 2rem; background: #f9f9f9; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+<h3 style="color: #1A237E; font-size: 1.4rem; margin-bottom: 1rem;">আপনার মতামত দিন</h3>
+<form id="reviewForm">
+<input id="username" placeholder="আপনার নাম" required="" style="padding: 0.6rem; width: 100%; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;" type="text"/>
+<select id="rating" required="" style="padding: 0.6rem; width: 100%; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
+<option value="">রেটিং দিন</option>
+<option value="5">⭐⭐⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="2">⭐⭐</option>
+<option value="1">⭐</option>
+</select>
+<textarea id="comment" placeholder="আপনার মতামত লিখুন" required="" style="padding: 0.6rem; width: 100%; margin-bottom: 1rem; height: 100px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+<button style="background: #FFAB00; color: white; padding: 0.8rem 2rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;" type="submit">পাঠান</button>
+</form>
 </div>
-<div class="review-card">
-<p><strong>রিয়া আক্তার</strong> <span>★★★★☆</span></p>
-<p>ব্যবহার করা সহজ এবং পেমেন্ট দ্রুত। তবে আরো সার্ভে থাকলে ভালো হতো।</p>
-</div>
-<div class="review-card">
-<p><strong>সাব্বির হাসান সিপন</strong> <span>★★★☆☆</span></p>
-<p>আমি প্রথমে ভেবেছিলাম এটা ফেক অ্যাপ, তবে ছোট ছোট টাস্ক পূরণ করে প্রতিদিন ২০০-৮০০ টাকা পাচ্ছি।</p>
-</div>
+<div id="liveReviews" style="margin-top: 2rem;"></div>
 </div>
 </div>
 <script>
@@ -487,5 +492,47 @@
     });
     document.getElementById('about').style.display = 'block';
   </script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('reviewForm');
+    const reviewsContainer = document.getElementById('liveReviews');
+
+    // Function to display reviews from localStorage
+    function loadReviews() {
+      const savedReviews = JSON.parse(localStorage.getItem('userReviews')) || [];
+      reviewsContainer.innerHTML = '';
+      savedReviews.forEach(({ username, rating, comment }) => {
+        const reviewHTML = `
+          <div class="review-card" style="border-bottom: 1px solid #E0E0E0; padding: 1.5rem 0;">
+            <p><strong>${username}</strong> <span>${'⭐'.repeat(rating)}</span></p>
+            <p>${comment}</p>
+          </div>
+        `;
+        reviewsContainer.innerHTML += reviewHTML;
+      });
+    }
+
+    // Load reviews on page load
+    loadReviews();
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const rating = document.getElementById('rating').value;
+      const comment = document.getElementById('comment').value.trim();
+
+      if (username && rating && comment) {
+        const newReview = { username, rating, comment };
+        const existingReviews = JSON.parse(localStorage.getItem('userReviews')) || [];
+        existingReviews.unshift(newReview); // newest on top
+        localStorage.setItem('userReviews', JSON.stringify(existingReviews));
+        loadReviews(); // Refresh display
+        form.reset();
+      }
+    });
+  });
+</script>
 </body>
 </html>
